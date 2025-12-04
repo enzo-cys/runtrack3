@@ -13,7 +13,7 @@ function jourtravaille(date) {
         '2020-12-25'  // Noël
     ];
 
-    const dateString = date.toISOString().split('T')[0];
+    const dateString = date.toISOString().split('T')[0]; // Format YYYY-MM-DD .split('T')[0]; pour ne garder que la date
     const jour = date.getDate();
     const mois = date.getMonth() + 1;
     const annee = date.getFullYear();

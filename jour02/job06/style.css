@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.konami {
+    background-color: #0082c3;
+    color: #ffffff;
+    text-align: center;
+}
+
+body.konami h1 {
+    color: #ff1493;
+    font-size: 2em;
+}
+
+body.konami p {
+    color: #ffffff;
+}

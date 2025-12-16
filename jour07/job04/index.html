@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de création de compte - Job04</title>
+    <!-- Materialize CSS CDN v1.0.0 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="blue darken-2">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">
+                    <img src="images/logo.jpg" alt="Logo" style="height: 50px; padding: 5px 0;">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Inscription</a></li>
+                    <li><a href="index.html">Connexion</a></li>
+                    <li><a href="index.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h1>Créer un compte</h1>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Civilité</legend>
+                        <p>
+                            <label>
+                                <input type="radio" name="civilite" value="monsieur" checked>
+                                <span>Monsieur</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="radio" name="civilite" value="madame">
+                                <span>Madame</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="radio" name="civilite" value="autre">
+                                <span>Autre</span>
+                            </label>
+                        </p>
+                    </fieldset>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" id="prenom" name="prenom" required>
+                        <label for="prenom">Prénom</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">person_outline</i>
+                        <input type="text" id="nom" name="nom" required>
+                        <label for="nom">Nom</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">home</i>
+                        <input type="text" id="adresse" name="adresse" required>
+                        <label for="adresse">Adresse</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="password" id="motdepasse" name="motdepasse" required>
+                        <label for="motdepasse">Mot de passe</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input type="password" id="confirmation" name="confirmation" required>
+                        <label for="confirmation">Confirmez le mot de passe</label>
+                    </div>
+
+                    <fieldset>
+                        <legend>Passions</legend>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="passions[]" value="informatique">
+                                <span><i class="material-icons tiny">computer</i> Informatique</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="passions[]" value="voyages">
+                                <span><i class="material-icons tiny">flight</i> Voyages</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="passions[]" value="sport">
+                                <span><i class="material-icons tiny">sports_soccer</i> Sport</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="passions[]" value="lecture">
+                                <span><i class="material-icons tiny">menu_book</i> Lecture</span>
+                            </label>
+                        </p>
+                    </fieldset>
+
+                    <div class="center-align" style="margin-top: 20px;">
+                        <button class="btn blue darken-2" type="submit">
+                            <i class="material-icons right">check</i>Valider
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer grey darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">À propos</h5>
+                    <p class="grey-text text-lighten-4">Bienvenue sur notre site de création de compte sécurisé avec Materialize.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Navigation</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i class="material-icons tiny">home</i> Accueil</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i class="material-icons tiny">person_add</i> Inscription</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i class="material-icons tiny">login</i> Connexion</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html"><i class="material-icons tiny">search</i> Rechercher</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">© 2025 Mon Site</div>
+        </div>
+    </footer>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

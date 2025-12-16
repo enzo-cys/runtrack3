@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlord - La Puissance Suprême</title>
+    <!-- Materialize CSS CDN v1.0.0 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="grey darken-4">
+    <header>
+        <nav class="red darken-4">
+            <div class="nav-wrapper container">
+                <a href="#accueil" class="brand-logo">
+                    <img src="images/logo.jpg" alt="Logo" style="height: 50px; padding: 5px 0;">
+                </a>
+                <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#personnages">Personnages</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-menu">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#personnages">Personnages</a></li>
+            <li><a href="#histoire">Histoire</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- Section héro -->
+        <section id="accueil" class="grey darken-3 white-text center-align" style="padding: 80px 20px;">
+            <div class="container">
+                <h1 class="flow-text">OVERLORD</h1>
+                <p class="flow-text orange-text text-lighten-2">La Grande Tombe et ses Mystères</p>
+                <a class="btn-large orange darken-2 waves-effect waves-light" href="#personnages">Découvrir</a>
+            </div>
+        </section>
+
+        <!-- Section Personnages -->
+        <section id="personnages" class="section">
+            <div class="container">
+                <h2 class="center-align white-text">Les Gardiens de la Grande Tombe</h2>
+                
+                <div class="row">
+                    <!-- Carte 1 - Grande (Ainz) -->
+                    <div class="col s12 m12 l8">
+                        <div class="card z-depth-3">
+                            <div class="card-image">
+                                <img src="images/img.jpg" alt="Ainz Ooal Gown">
+                                <span class="card-title">Ainz Ooal Gown</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Le Maître de la Grande Tombe, un squelette d'une puissance inimaginable. Créateur de la Guilde des Neuf Éclats, Ainz est un dieu vivant qui règne sur les mondes.</p>
+                                <div>
+                                    <span class="badge grey darken-3 white-text">Classe: Seigneur Liche</span>
+                                    <span class="badge orange white-text">Niveau: 100</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" class="orange-text text-lighten-2">Plus d'infos</a>
+                                <a href="#" class="orange-text text-lighten-2">Pouvoirs</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 2 - Petite (Albedo) -->
+                    <div class="col s12 m6 l4">
+                        <div class="card z-depth-2">
+                            <div class="card-image">
+                                <img src="images/img2.jpg" alt="Albedo">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Albedo</span>
+                                <p>La gardienne de la Grande Tombe, dévoué à Ainz. Albedo protège les intérêts de son maître avec férocité.</p>
+                                <span class="orange-text">Classe: Protectrice</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 3 - Petite (Shalltear) -->
+                    <div class="col s12 m6 l4">
+                        <div class="card z-depth-2">
+                            <div class="card-image">
+                                <img src="images/img3.jpg" alt="Shalltear">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Shalltear</span>
+                                <p>Une vampire puissante et l'une des Nazarick Guardians. Elle est ambitieuse et compétitive.</p>
+                                <span class="red-text">Classe: Vampire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 4 - Petite (Cocytus) -->
+                    <div class="col s12 m6 l4">
+                        <div class="card z-depth-2">
+                            <div class="card-image">
+                                <img src="images/img4.jpg" alt="Cocytus">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Cocytus</span>
+                                <p>Un insecte géant et gardien du 5e étage. Connu pour son honneur et sa loyauté envers Ainz.</p>
+                                <span class="blue-text">Classe: Insecte Géant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 5 - Moyenne (Demiurge) -->
+                    <div class="col s12 m12 l8">
+                        <div class="card z-depth-3">
+                            <div class="card-image">
+                                <img src="images/img5.jpeg" alt="Demiurge">
+                                <span class="card-title">Demiurge</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Un démon redoutable et l'un des plus fidèles serviteurs d'Ainz. Stratège brillant et administrateur de la Grande Tombe.</p>
+                                <div>
+                                    <span class="badge grey darken-3 white-text">Rôle: Stratège</span>
+                                    <span class="badge red white-text">Région: Nazarick</span>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <a href="#" class="orange-text text-lighten-2">Stratégies</a>
+                                <a href="#" class="orange-text text-lighten-2">Domaines</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 6 - Petite (Mare/Aura) -->
+                    <div class="col s12 m6 l4">
+                        <div class="card z-depth-2">
+                            <div class="card-image">
+                                <img src="images/img6.jpg" alt="Jumeaux">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title">Mare et Aura</span>
+                                <p>Les gardiens jumeaux de la 6e étage. Enfants éternels dotés de pouvoirs de la nature.</p>
+                                <span class="green-text">Classe: Êtres Naturels</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Histoire -->
+        <section id="histoire" class="section">
+            <div class="container">
+                <h2 class="center-align white-text">L'Histoire de Nazarick</h2>
+                
+                <div class="collection z-depth-2">
+                    <div class="collection-header">
+                        <h5 class="orange-text">Les Chapitres Majeurs</h5>
+                    </div>
+                    <div class="collection-item">
+                        <i class="material-icons left orange-text">bookmark</i>
+                        <span class="title">Le Transfert</span>
+                        <p class="grey-text">Ainz se retrouve transporté dans un monde nouveau avec son guildhall, Nazarick.</p>
+                    </div>
+                    <div class="collection-item">
+                        <i class="material-icons left orange-text">bookmark</i>
+                        <span class="title">L'Exploration</span>
+                        <p class="grey-text">Découverte d'un monde vaste rempli de magie et de créatures fabuleuses.</p>
+                    </div>
+                    <div class="collection-item">
+                        <i class="material-icons left orange-text">bookmark</i>
+                        <span class="title">La Domination</span>
+                        <p class="grey-text">Ainz étend son influence sur le monde et établit son pouvoir absolu.</p>
+                    </div>
+                    <div class="collection-item">
+                        <i class="material-icons left orange-text">bookmark</i>
+                        <span class="title">Les Empires</span>
+                        <p class="grey-text">Création de l'Empire de Sorcelant et construction d'une civilisation sous le règne d'Ainz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Galerie -->
+        <section id="galerie" class="section">
+            <div class="container">
+                <h2 class="center-align white-text">Galerie de la Grande Tombe</h2>
+                <div class="row center-align">
+                    <div class="col m4 s12">
+                        <div class="card-panel grey darken-2 z-depth-2">
+                            <i class="material-icons large orange-text">castle</i>
+                            <p class="white-text">La Grande Tombe</p>
+                            <p class="grey-text text-lighten-1">La forteresse suprême de Nazarick</p>
+                        </div>
+                    </div>
+                    <div class="col m4 s12">
+                        <div class="card-panel grey darken-2 z-depth-2">
+                            <i class="material-icons large orange-text">groups</i>
+                            <p class="white-text">Les Gardiens</p>
+                            <p class="grey-text text-lighten-1">Les serviteurs les plus puissants</p>
+                        </div>
+                    </div>
+                    <div class="col m4 s12">
+                        <div class="card-panel grey darken-2 z-depth-2">
+                            <i class="material-icons large orange-text">flash_on</i>
+                            <p class="white-text">Les Pouvoirs</p>
+                            <p class="grey-text text-lighten-1">Magie et compétences suprêmes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer red darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="orange-text text-lighten-2">À Propos de Overlord</h5>
+                    <p class="grey-text text-lighten-4">Un univers épique où un roi des jeux vidéo est transporté avec son guildhall dans un monde de fantasy. Découvrez la légende d'Ainz Ooal Gown.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="orange-text text-lighten-2">Liens Rapides</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#accueil">Accueil</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#personnages">Personnages</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#histoire">Histoire</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#galerie">Galerie</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey darken-4">
+            <div class="container orange-text text-lighten-2">© 2025 Overlord Fansite - La Puissance Suprême</div>
+        </div>
+    </footer>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            M.Sidenav.init(document.querySelectorAll(".sidenav"));
+        });
+    </script>
+</body>
+</html>

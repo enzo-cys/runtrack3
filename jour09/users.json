@@ -1,0 +1,29 @@
+[
+ {
+ "id": 1,
+ "email": "john@laplateforme.io",
+ "nom": "Doe",
+ "prenom": "John",
+ "password": "hash123",
+ "role": "user"
+ },
+
+ {
+ "id": 2,
+ "email": "jane@laplateforme.io",
+ "nom": "Smith",
+ "prenom": "Jane",
+ "password": "hash456",
+ "role": "admin"
+ },
+
+ {
+ "id": 3,
+ "email": "bob@laplateforme.io",
+ "nom": "Boby",
+ "prenom": "Bob",
+ "password": "hash789",
+ "role": "user"
+ }
+ 
+]

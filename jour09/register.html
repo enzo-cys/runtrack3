@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription · La Plateforme_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="shadow-sm">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="./index.html">La Plateforme_</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./login.html">Connexion</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./register.html">Inscription</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./calendar.html">Calendrier</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./backoffice.html">Backoffice</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h1 class="h4 fw-bold mb-3">Créer un compte</h1>
+                            <form id="registerForm" class="row g-3" onsubmit="handleRegister(event)">
+                                <div class="col-md-6">
+                                    <label for="registerPrenom" class="form-label">Prénom</label>
+                                    <input type="text" class="form-control" id="registerPrenom" placeholder="Jane" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="registerNom" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="registerNom" placeholder="Smith" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="registerEmail" class="form-label">Email La Plateforme_</label>
+                                    <input type="email" class="form-control" id="registerEmail" placeholder="prenom.nom@laplateforme.io" required>
+                                    <div class="form-text">Seul le domaine @laplateforme.io sera accepté.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="registerPassword" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" id="registerPassword" placeholder="Minimum 6 caractères" required minlength="6">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="registerPasswordConfirm" class="form-label">Confirmation</label>
+                                    <input type="password" class="form-control" id="registerPasswordConfirm" placeholder="••••••••" required>
+                                </div>
+                                <div class="col-12 d-grid mt-2">
+                                    <button type="submit" class="btn btn-primary">Créer mon compte</button>
+                                </div>
+                            </form>
+                            <p class="mt-4 mb-0 small">Déjà inscrit ? <a href="./login.html">Se connecter</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 border-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="small footer-note">La Plateforme_</span>
+            <a class="small link-secondary" href="./index.html">Retour à l'accueil</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/auth.js"></script>
+</body>
+</html>

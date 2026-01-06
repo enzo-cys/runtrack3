@@ -1,0 +1,94 @@
+:root {
+	--lp-primary: #c41e3a;
+	--lp-light: #faf5f6;
+	--lp-text: #1f2a3d;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, sans-serif;
+	color: var(--lp-text);
+	background-color: #ffffff;
+}
+
+.hero {
+	background: linear-gradient(135deg, #faf5f6 0%, #ffffff 40%);
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.active {
+	background-color: #c41e3a !important;
+	border-color: #c41e3a !important;
+	color: #ffffff !important;
+}
+
+.btn-outline-primary {
+	color: #c41e3a !important;
+	border-color: #c41e3a !important;
+}
+
+.btn-outline-primary:hover {
+	background-color: #c41e3a !important;
+	color: #ffffff !important;
+	border-color: #c41e3a !important;
+}
+
+.text-primary {
+	color: #c41e3a !important;
+}
+
+.link-primary {
+	color: #c41e3a !important;
+}
+
+.link-primary:hover {
+	color: #a01729 !important;
+}
+
+.badge.text-bg-primary {
+	background-color: #c41e3a !important;
+}
+
+.nav-link.active {
+	color: #c41e3a !important;
+}
+
+.form-check-input:checked {
+	background-color: #c41e3a !important;
+	border-color: #c41e3a !important;
+}
+
+a {
+	color: #c41e3a;
+}
+
+a:hover {
+	color: #a01729;
+}
+
+.card {
+	border-radius: 14px;
+}
+
+.navbar-brand {
+	letter-spacing: 0.4px;
+}
+
+.form-illustration {
+	background: var(--lp-light);
+	border: 1px solid #e5e8f0;
+	border-radius: 12px;
+}
+
+.badge.text-bg-primary {
+	background-color: var(--lp-primary);
+}
+
+.table thead th {
+	background-color: var(--lp-light);
+}
+
+.footer-note {
+	color: #6c757d;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice · La Plateforme_</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="shadow-sm">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="./index.html">La Plateforme_</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./login.html">Connexion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./register.html">Inscription</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./calendar.html">Calendrier</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./backoffice.html">Backoffice</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h1 class="h4 fw-bold mb-0">Backoffice modération</h1>
+                </div>
+                <button class="btn btn-outline-danger btn-sm" onclick="logout()">Déconnexion</button>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h2 class="h6 fw-bold mb-0">Demandes de présence</h2>
+                                <div class="d-flex gap-2">
+                                    <span class="badge text-bg-warning">En attente</span>
+                                    <span class="badge text-bg-success">Validée</span>
+                                    <span class="badge text-bg-danger">Refusée</span>
+                                </div>
+                            </div>
+                            <div id="allRequestsList">
+                                <p class="text-secondary">Chargement...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body p-4">
+                            <h2 class="h6 fw-bold mb-3">Statistiques</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Administrateurs
+                                    <span class="badge text-bg-primary" id="adminCount">0</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Modérateurs
+                                    <span class="badge text-bg-primary" id="moderatorCount">0</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Utilisateurs
+                                    <span class="badge text-bg-primary" id="userCount">0</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card shadow-sm border-0" id="adminPanel">
+                        <div class="card-body p-4">
+                            <h2 class="h6 fw-bold mb-3">
+                                <i class="bi bi-shield-lock"></i> Gestion des rôles
+                                <span class="badge text-bg-danger ms-2">Admin</span>
+                            </h2>
+                            <p class="small text-secondary mb-3">Changez les rôles des utilisateurs. Les boutons permettent de promouvoir ou rétrograder.</p>
+                            <div id="userManagementList">
+                                <p class="text-secondary">Chargement...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Afficher le panel admin si l'utilisateur est admin
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = getCurrentUser();
+            if (currentUser && isAdmin(currentUser)) {
+                document.getElementById('adminPanel').style.display = 'block';
+            }
+        });
+    </script>
+
+    <footer class="py-4 border-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="small footer-note">La Plateforme_</span>
+            <a class="small link-secondary" href="./index.html">Retour à l'accueil</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/backoffice.js"></script>
+</body>
+</html>

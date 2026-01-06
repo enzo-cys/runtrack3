@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier · La Plateforme_</title>
+    
+    <!-- FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        #calendar {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .fc-event {
+            cursor: pointer;
+        }
+        .fc-daygrid-event {
+            white-space: normal;
+        }
+    </style>
+</head>
+<body>
+    <header class="shadow-sm">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="./index.html">La Plateforme_</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./login.html">Connexion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./register.html">Inscription</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./calendar.html">Calendrier</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./backoffice.html">Backoffice</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1 class="h4 fw-bold mb-0">Mon calendrier de présence</h1>
+                <button class="btn btn-outline-danger btn-sm" onclick="logout()">Déconnexion</button>
+            </div>
+            
+            <!-- Calendrier interactif -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body p-4">
+                    <h2 class="h6 fw-bold mb-3">Vue mensuelle</h2>
+                    <div id="calendar"></div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <h2 class="h5 fw-bold mb-3">Demander une présence</h2>
+                            <form id="presenceForm" class="vstack gap-3" onsubmit="addPresenceRequest(event)">
+                                <div>
+                                    <label for="presenceDate" class="form-label">Date souhaitée</label>
+                                    <input type="date" class="form-control" id="presenceDate" required>
+                                </div>
+                                <div>
+                                    <label for="presenceNote" class="form-label">Commentaire (optionnel)</label>
+                                    <textarea class="form-control" id="presenceNote" rows="3" placeholder="Ex: Projet en groupe en salle B"></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Demander une présence</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <h2 class="h5 fw-bold mb-3">Mes demandes</h2>
+                            <div id="userRequestsList">
+                                <p class="text-secondary">Chargement...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 border-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="small footer-note">La Plateforme_</span>
+            <a class="small link-secondary" href="./index.html">Retour à l'accueil</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/calendar.js"></script>
+</body>
+</html>

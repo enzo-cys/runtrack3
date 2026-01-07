@@ -2,12 +2,33 @@
 (function() {
     'use strict';
 
-    // Charger toutes les demandes pour les modérateurs/admins
+    // VÉRIFICATION D'ACCÈS - Bloquer l'accès aux utilisateurs non modo/admin
+    const currentUser = getCurrentUser();
+    
+    if (!currentUser) {
+        alert('Vous devez être connecté pour accéder au backoffice');
+        window.location.href = 'login.html';
+        return;
+    }
+    
+    if (!isModerator(currentUser)) {
+        alert('Accès refusé. Cette page est réservée aux administrateurs et modérateurs.');
+        window.location.href = 'index.html';
+        return;
+    }
+
+    // Charger toutes les demandes pour les modo/admin
     window.loadAllRequests = function() {
         const currentUser = getCurrentUser();
-        if (!currentUser || !isModerator(currentUser)) {
-            alert('Accès non autorisé');
+        if (!currentUser) {
+            alert('Vous devez être connecté');
             window.location.href = 'login.html';
+            return;
+        }
+        
+        if (!isModerator(currentUser)) {
+            alert('Accès non autorisé. Réservé aux modérateurs et administrateurs.');
+            window.location.href = 'index.html';
             return;
         }
 
@@ -77,8 +98,13 @@
         }
     };
 
-    // Charger les statistiques des rôles
+    // Charger les statistiques des rôles (réservé aux admins)
     window.loadRoleStats = function() {
+        const currentUser = getCurrentUser();
+        if (!currentUser || !isAdmin(currentUser)) {
+            return; // Les modérateurs n'ont pas accès aux statistiques
+        }
+        
         const users = JSON.parse(localStorage.getItem('users')) || [];
         
         const stats = {
@@ -179,13 +205,31 @@
     // Initialisation
     document.addEventListener('DOMContentLoaded', function() {
         const currentUser = getCurrentUser();
+        const isUserAdmin = isAdmin(currentUser);
         
+        // Afficher ou masquer les sections selon le rôle
+        const statsCard = document.querySelector('.card:has(#adminCount)');
+        const adminPanel = document.getElementById('adminPanel');
+        
+        // Les modérateurs ne voient pas les statistiques
+        if (statsCard && !isUserAdmin) {
+            statsCard.style.display = 'none';
+        }
+        
+        // Les modérateurs ne voient pas la gestion des rôles
+        if (adminPanel && !isUserAdmin) {
+            adminPanel.style.display = 'none';
+        } else if (adminPanel && isUserAdmin) {
+            adminPanel.style.display = 'block';
+        }
+        
+        // Charger les données
         if (isModerator(currentUser)) {
             loadAllRequests();
-            loadRoleStats();
         }
 
-        if (isAdmin(currentUser)) {
+        if (isUserAdmin) {
+            loadRoleStats();
             loadUserManagement();
         }
     });

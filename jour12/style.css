@@ -1,0 +1,207 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container-fluid {
+    max-width: 1000px;
+}
+
+header h1 {
+    color: #dc3545;
+    font-size: 2.5rem;
+}
+
+.btn-nav {
+    background-color: white;
+    color: #000;
+    border: 2px solid #ddd;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-nav:hover {
+    background-color: #f8f9fa;
+    border-color: #dc3545;
+}
+
+.btn-nav.active {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.btn-nav i {
+    margin-right: 5px;
+}
+
+.tool-section {
+    display: none;
+}
+
+.tool-section.active {
+    display: block;
+}
+
+.card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+}
+
+.card-body {
+    padding: 40px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.time-display {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: #dc3545;
+    letter-spacing: 0.05em;
+}
+
+.controls {
+    margin: 30px 0;
+}
+
+.btn-lg {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-lg:hover {
+    opacity: 0.9;
+}
+
+/* Boutons */
+.btn-primary {
+    background: white;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+}
+
+.btn-primary:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger {
+    background: #dc3545;
+    border: 2px solid #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    border-color: #c82333;
+}
+
+.btn-outline {
+    border: 2px solid #000;
+    color: #000;
+    background: white;
+}
+
+.btn-outline:hover {
+    background: #000;
+    color: white;
+}
+
+.form-control {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+}
+
+.tours-container,
+.alarmes-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+.list-group-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    background: #dc3545;
+    color: white;
+    border-radius: 3px;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .time-display {
+        font-size: 3rem;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .time-display {
+        font-size: 2rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .btn-nav {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}
+
+
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+input:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
